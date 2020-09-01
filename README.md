@@ -32,3 +32,5 @@ It is assumed that:
 4 - Create a new app
 
     oc new-app simple-rest-api
+    
+Obs: Use SPRING_PROFILES_ACTIVE environment variable to specify the spring profile
