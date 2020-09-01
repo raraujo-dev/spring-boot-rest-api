@@ -17,13 +17,13 @@ It is assumed that:
 - OpenShift platform is already running and you have already logged into your Openshit Cluster using 'oc client' tool.
 - The project is already pushed into your local machine
 
-1 - Import the fuse image
+1 - Import the Open JDK 8 image
 
-    oc import-image fuse7/fuse-java-openshift --from=registry.access.redhat.com/fuse7/fuse-java-openshift --confirm
+    oc import-image redhat-openjdk-18/openjdk18-openshift --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift --confirm
 
 2 - Create a new build config on Openshift pointing to the Fuse Image
 
-    oc new-build --binary=true --image-stream=fuse-java-openshift  --name=simple-rest-api
+    oc new-build --binary=true --image-stream=openjdk18-openshift  --name=simple-rest-api
 
 3 - Start the build pointing the '--from-dir' variable to the project folder
 
