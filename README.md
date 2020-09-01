@@ -19,18 +19,16 @@ It is assumed that:
 
 1 - Import the fuse image
 
-oc import-image fuse7/fuse-java-openshift --from=registry.access.redhat.com/fuse7/fuse-java-openshift --confirm
+    oc import-image fuse7/fuse-java-openshift --from=registry.access.redhat.com/fuse7/fuse-java-openshift --confirm
 
 2 - Create a new build config on Openshift pointing to the Fuse Image
 
-oc new-build --binary=true --image-stream=fuse-java-openshift  --name=simple-rest-api
+    oc new-build --binary=true --image-stream=fuse-java-openshift  --name=simple-rest-api
 
 3 - Start the build pointing the '--from-dir' variable to the project folder
 
-oc start-build simple-rest-api --from-dir=. --follow
+    oc start-build simple-rest-api --from-dir=. --follow
 
 4 - Create a new app
 
-oc new-app simple-rest-api
-
-
+    oc new-app simple-rest-api
