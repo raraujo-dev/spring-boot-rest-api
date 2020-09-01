@@ -22,6 +22,5 @@ public class CurrentTimeService {
 		return message.concat(localDateTime.toString());
 		
 	}
-	
 
 }
